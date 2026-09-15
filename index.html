@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+  <h1>Library Management System</h1>
+  <h2>Add Book</h2>
+  <form id="bookForm">
+    <input type="text" id="title" placeholder="Book Title" required>
+    <input type="text" id="author" placeholder="Author" required>
+    <button type="submit">Add Book</button>
+  </form>
+
+  <h2>Add Student</h2>
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Student Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <button type="submit">Add Student</button>
+  </form>
+
+  <h2>Books</h2>
+  <ul id="bookList">
+  </ul>
+
+
+  <h2>Students</h2>
+  <ul id="studentList">
+
+  </ul>
+
+  <h2>Borrow/Return</h2>
+  <form id="borrowForm">
+    <input type="number" id="studentId" placeholder="Student ID" required>
+    <input type="number" id="bookId" placeholder="Book ID" required>
+    <button type="submit">Borrow Book</button>
+  </form>
+
+  <form id="returnForm">
+    <input type="number" id="borrowId" placeholder="Borrow ID" required>
+    <button type="submit">Return Book</button>
+  </form>
+
+  <h2>Borrow Records</h2>
+  <ul id="borrowList"></ul>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
